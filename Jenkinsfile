@@ -18,14 +18,14 @@ pipeline {
         stage ('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
 			}
 		}
 
         stage ('push') {
 
 			steps {
-				sh 'docker push rajansingh1124/helloworld_123:tagname'
+				sh "docker push first:0.1"
 			}
 		}
 
