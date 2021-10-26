@@ -7,7 +7,7 @@ pipeline {
             steps{
                 echo 'The code now will be built into artifact'
                 sh "pwd"
-                sh "sudo docker build  -t first:0.1 ."
+                sh "sudo docker build  -t first:0.1 . -y"
             }
         }
         stage ('Artifact Archiving') {
