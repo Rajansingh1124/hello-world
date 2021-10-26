@@ -8,7 +8,7 @@ pipeline {
                 echo 'The code now will be built into artifact'
                 sh "pwd"
                 sh "docker build  -t first:0.1 ."
-                sh "docker run -dt -p 7000:7000 -m new:0.1 first"
+                sh "docker run -dt -p 7000:7000 first"
             }
         }
         stage ('Artifact Archiving') {
