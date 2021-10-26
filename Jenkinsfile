@@ -3,10 +3,11 @@ pipeline {
 
     stages {
 
-        stage ('Building') {
+        stage ('build') {
             steps{
                 echo 'The code now will be built into artifact'
                 sh "pwd"
+                sh "docker build  -t first:first . 
             }
         }
         stage ('Artifact Archiving') {
