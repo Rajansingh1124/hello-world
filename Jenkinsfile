@@ -25,7 +25,7 @@ pipeline {
         stage ('push') {
 
 			steps {
-				sh 'docker push first:0.1'
+				sh 'docker push rajansingh1124/helloworld_123:tagname'
 			}
 		}
 
