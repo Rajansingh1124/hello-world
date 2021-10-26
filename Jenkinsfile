@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    environment {
+		DOCKERHUB_CREDENTIALS=credentials('rajansingh1124')
+	}
 
     stages {
 
@@ -11,18 +15,19 @@ pipeline {
                 sh "docker run -dt -p 7000:7000 first:0.1"
             }
         }
-        stage ('Artifact Archiving') {
-            steps {
-                echo 'The artifact will be uploaded to an artifact repository'
-            }
-        }
+        stage ('Login') {
 
-        stage ('Testing') {
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
 
-            steps{
-                echo 'The Artifact is staged onto the staging server'
-            }
-        }
+        stage ('push') {
+
+			steps {
+				sh 'docker push rajansingh1124/first:0.1'
+			}
+		}
 
         stage ('staging') {
 
