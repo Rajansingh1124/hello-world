@@ -11,8 +11,8 @@ pipeline {
             steps{
                 echo 'The code now will be built into artifact'
                 sh "pwd"
-                sh "docker-compose up -d"
                 sh "docker-compose build"
+		sh "docker-compose up -d"
             }
        }
         stage ('Login') {
