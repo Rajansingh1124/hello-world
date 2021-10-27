@@ -4,4 +4,6 @@ services:
     build: .
     container_name: first
     image: fiestimage
+    port:
+       - "7000:7000"
     
