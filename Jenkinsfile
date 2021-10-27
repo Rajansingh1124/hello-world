@@ -12,7 +12,6 @@ pipeline {
                 echo 'The code now will be built into artifact'
                 sh "pwd"
                 sh "docker-compose build"
-		sh "docker-compose up -d"
             }
        }
         stage ('Login') {
@@ -28,6 +27,12 @@ pipeline {
 				sh "docker push rajansingh1124/first:${BUILD_NUMBER}"
 			}
 		}
+	    
+	    stage ('deploy') {
+		    steps {
+			    sh "docker-compose up -d"
+		    }
+	    }
 
         stage ('staging') {
 
