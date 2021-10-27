@@ -3,7 +3,7 @@ services:
   web:
     build: .
     container_name: first
-    image: rajansingh1124/first
+    image: rajansingh1124/first:${BUILD_NUMBER}
     ports:
        - "7000:7000"
     
