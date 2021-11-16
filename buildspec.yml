@@ -9,6 +9,6 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - ssh newuser@3.110.124.191 -p docker-compose up -d 
+      - docker-compose up -d 
   
     
