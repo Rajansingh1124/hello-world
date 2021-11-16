@@ -3,7 +3,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      
+      - echo pre_build step...
+      - docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASS
       
   build:
     commands:
