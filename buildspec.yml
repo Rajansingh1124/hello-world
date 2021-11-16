@@ -11,5 +11,6 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...  
       - pwd
+      - docker-compose up -d .
   
     
