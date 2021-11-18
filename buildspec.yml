@@ -11,7 +11,7 @@ phases:
       - pwd
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       
- post_build:
+  post_build:
     commands:
       - echo Build completed on `date`
       
