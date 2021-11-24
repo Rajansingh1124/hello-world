@@ -22,7 +22,3 @@ phases:
       - echo Pushing the Docker image...
       - docker push 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
       
-artifacts:
-  files:
-    - '**/*'
-  name: $AWS_DEFAULT_REGION-$(date +%Y-%m-%d) 
