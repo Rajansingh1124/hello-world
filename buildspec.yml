@@ -13,11 +13,12 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...  
       - pwd
-      - docker build -t codebuilddemo .
+#       - docker build -t codebuilddemo .
       - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
       - pwd 
       - echo deploy
-      - ssh newuser@3.110.101.92 -p 1234567 docker-compose up -d 
+      - docker-compose up -d
+      - ssh newuser@3.110.101.92 -p 1234567  
       - mv . /var/lib/docker
       
   post_build:
