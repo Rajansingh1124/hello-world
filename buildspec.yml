@@ -13,8 +13,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...  
       - pwd
-      - docker build -t codebuilddemo .
-      - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
+      - docker build -t devohra/codebuilddemo .
+      - docker tag devohra/codebuilddemo codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
       - pwd 
 #       - echo deploy
 #       - docker-compose up -d
