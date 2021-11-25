@@ -14,7 +14,7 @@ phases:
       - echo Building the Docker image...  
       - pwd
       - docker build -t codebuilddemo .
-      - docker tag codebuilddemo codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
+      - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
       - pwd 
 #       - echo deploy
 #       - docker-compose up -d
