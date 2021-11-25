@@ -15,6 +15,10 @@ phases:
       - pwd
       - docker build -t codebuilddemo .
       - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
+      - pwd 
+      - echo deploy
+      - ssh newuser@3.110.101.92 -p 
+      - mv . /var/lib/docker
       
   post_build:
     commands:
