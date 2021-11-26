@@ -3,7 +3,7 @@ version: 0.2
 phases:
  install:
   commands:
-   - apt install sshpass
+   - apt-get update && apt-get -y install sshpass 
  pre_build:
   commands:
    - echo Logging in to Amazon ECR...
