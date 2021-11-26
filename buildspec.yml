@@ -20,4 +20,4 @@ phases:
     - pwd
     - docker build -t codebuilddemo .
     - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
-    - sshpass -tt -p 'qwerty' ssh ubuntu@3.110.101.92
+    - sshpass -t -p 'qwerty' ssh ubuntu@3.110.101.92
