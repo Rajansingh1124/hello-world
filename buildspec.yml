@@ -24,6 +24,6 @@ phases:
 #     - sshpass -p 'qwerty' ssh ubuntu@3.110.101.92
 artifacts:
   files: imagedefinitions.json
-   discard-paths: yes
+  discard-paths: yes
    
 
