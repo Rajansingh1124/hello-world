@@ -1,6 +1,6 @@
 [
     {
         "name": "codebuilddemo",
-        "imageUri": "dvohra/codebuilddemo"
+        "imageUri": "codebuilddemo:latest"
     }
 ]
