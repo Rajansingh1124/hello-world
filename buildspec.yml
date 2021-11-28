@@ -12,7 +12,7 @@ phases:
    - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 117801723042.dkr.ecr.ap-south-1.amazonaws.com
  build:
   commands:
-   - docker build --tag $REPOSITORY_URI:$TAG .  
+#    - docker build --tag $REPOSITORY_URI:$TAG .  
  post_build:
   commands:
    - echo Build started on `date`
