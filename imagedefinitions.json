@@ -1,6 +1,6 @@
 [
     {
         "name": "codebuilddemo",
-        "imageUri": "codebuilddemo:latest"
+        "imageUri": "codebuilddemo"
     }
 ]
