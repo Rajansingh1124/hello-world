@@ -12,13 +12,13 @@ phases:
    - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 117801723042.dkr.ecr.ap-south-1.amazonaws.com
  build:
   commands:
-    - docker build --tag $REPOSITORY_URI:$TAG .  
+   - docker build --tag $REPOSITORY_URI:$TAG .  
  post_build:
   commands:
-    - echo Build started on `date`
-    - echo Building the Docker image...  
-    - pwd
-    - docker build -t codebuilddemo .
-    - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
+   - echo Build started on `date`
+   - echo Building the Docker image...  
+   - pwd
+   - docker build -t codebuilddemo .
+   - docker tag codebuilddemo:latest 117801723042.dkr.ecr.ap-south-1.amazonaws.com/codebuilddemo:latest
 #     - sshpass -p 'qwerty' ssh ubuntu@3.110.101.92
 
